@@ -1,0 +1,141 @@
+/* Question card styles */
+.question-card {
+  background: white;
+  padding: 2.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.question-header {
+  margin-bottom: 2.5rem;
+}
+
+.question-type {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* Options container */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.option:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.option.selected {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.option input[type="radio"] {
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+  accent-color: #3b82f6;
+}
+
+.option-text {
+  color: #374151;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Boolean options */
+.boolean-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.boolean-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  flex: 1;
+  min-width: 200px;
+}
+
+.boolean-option:hover {
+  background: #f9fafb;
+}
+
+.boolean-option.selected {
+  background: #ecfdf5;
+  border-color: #10b981;
+}
+
+.boolean-option.false-option.selected {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+.boolean-option input[type="radio"] {
+  margin-right: 0.75rem;
+  width: 20px;
+  height: 20px;
+}
+
+.boolean-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .question-card {
+    padding: 1.5rem;
+  }
+
+  .question-text {
+    font-size: 1.25rem;
+  }
+
+  .boolean-options {
+    flex-direction: column;
+  }
+
+  .boolean-option {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-card {
+    padding: 1rem;
+  }
+}

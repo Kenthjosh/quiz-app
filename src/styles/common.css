@@ -1,0 +1,106 @@
+/* Common styles shared across components */
+
+/* Container styles */
+.quiz-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Progress bar - used in multiple components */
+.progress-container {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.75rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.excellent {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.progress-fill.good {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.progress-fill.needs-improvement {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* Timer styles */
+.timer {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.timer-warning {
+  color: #ef4444;
+  animation: pulse 1s infinite;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+input:focus-visible,
+label:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
